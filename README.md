@@ -25,37 +25,36 @@ The aim of the project was the provide a reuseable framework for different 2-pla
 
 Template method applies to following classes:
 
-* __Game__
-* __Requirements__
-* __Player__
-* __IBoard__
+* ___Game___
+* ___Requirements___
+* ___Player___
+* ___IBoard___
 
-These classes should inherit to concrete classes to be used.
+These classes should inherit to concrete classes to be used
 
 ## Singleton pattern
 
-Singleton pattern enables a class to have only one instance withing the progeam
+Singleton pattern enables a class to have only one instance withing the program
 
 Singleton pattern was applies to following classes:
 
-* __ConnectFourReq__, a concrete subclass of __Requirements__ 
-  * Instead of creating a new instance in class __Computer__, it was more efficient to create only one instance and connecting it with the class __Computer__ as its methods __MakeMove()__ returns __CalculateMoves()__ of __Requirements__
+* ___ConnectFourReq___, a concrete subclass of ___Requirements___ 
+  * Instead of creating a new instance in class ___Computer___, it was more efficient to create only one instance and connecting it with the class ___Computer___ as its methods ___MakeMove()___ returns ___CalculateMoves()___ of ___Requirements___
   
-* __History__
+* ___History___
   * Contains funcionalities of saving and loading the game, and undoing and restoring moves during the gameplay
-  * __History__ should be sharing one file system, creating insatnce only on the first use to prevent save files or saved moves being overriden or duplicate
+  * ___History___ should be sharing one file system, creating insatnce only on the first use to prevent save files or saved moves being overriden or duplicate
 
 ## Command pattern
 
-Following methods of __History__ used the command pattern:
+Following methods of ___History___ used the command pattern:
 
-* __UndoMove()__
-* __RedoMove()__
-* __SaveGame()__
-* __LoadGame()__
+* ___UndoMove()___
+* ___RedoMove()___
+* ___SaveGame()___
+* ___LoadGame()___
 
-These methods could be used in the client through __Invoker__ due to command pattern. In order to use a command pattern, an interface __ICommand__ was created, which contained methods __Execute()__ and __Undo()__, and different command classes (__LoadCommand, SaveCommand and UndoCommand__) were created using an inheritance from ICommand. These command classes were implemented by storing in class __History__ based on its function, and these classes were implemented to class __Invoker__ to be called from the client. Therefore, it is possible to encapsulate all the information needed for execution, such as method patterns and the name of the method.
+These methods could be used in the client through ___Invoker___ due to command pattern. In order to use a command pattern, an interface ___ICommand___ was created, which contained methods ___Execute()___ and ___Undo()___, and different command classes (___LoadCommand, SaveCommand and UndoCommand___) were created using an inheritance from __ICommand__. These command classes were implemented by storing in class __History__ based on its function, and these classes were implemented to class ___Invoker___ to be called from the client. Therefore, it is possible to encapsulate all the information needed for execution, such as method patterns and the name of the method.
 
-![image](https://user-images.githubusercontent.com/74476122/159906215-f328aaa7-e87c-4f95-a370-2c1a38c4f56a.png)
 
 
