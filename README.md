@@ -39,8 +39,23 @@ Singleton pattern enables a class to have only one instance withing the progeam
 Singleton pattern was applies to following classes:
 
 * __ConnectFourReq__, a concrete subclass of __Requirements__ 
-  * It was more efficient to create only one instance since it had to be connected with the class __Computer__ as its methods __MakeMove()__ returns __CalculateMoves()__ of __Requirements__
+  * Instead of creating a new instance in class __Computer__, it was more efficient to create only one instance and connecting it with the class __Computer__ as its methods __MakeMove()__ returns __CalculateMoves()__ of __Requirements__
+  
 * __History__
+  * Contains funcionalities of saving and loading the game, and undoing and restoring moves during the gameplay
+  * __History__ should be sharing one file system, creating insatnce only on the first use to prevent save files or saved moves being overriden or duplicate
 
-- Command pattern
+## Command pattern
+
+Following methods of __History__ used the command pattern:
+
+* __UndoMove()__
+* __RedoMove()__
+* __SaveGame()__
+* __LoadGame()__
+
+These methods could be used in the client through __Invoker__ due to command pattern. In order to use a command pattern, an interface __ICommand__ was created, which contained methods __Execute()__ and __Undo()__, and different command classes (__LoadCommand, SaveCommand and UndoCommand__) were created using an inheritance from ICommand. These command classes were implemented by storing in class __History__ based on its function, and these classes were implemented to class __Invoker__ to be called from the client. Therefore, it is possible to encapsulate all the information needed for execution, such as method patterns and the name of the method.
+
+![image](https://user-images.githubusercontent.com/74476122/159906215-f328aaa7-e87c-4f95-a370-2c1a38c4f56a.png)
+
 
