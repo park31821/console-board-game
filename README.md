@@ -17,10 +17,9 @@ A console board game (Connect Four) using C# was implemented to understand the c
 
 ![스크린샷 2022-03-24 오후 3 16 51](https://user-images.githubusercontent.com/74476122/159847247-719e954b-2144-42c4-9206-3f3c7f58f4b4.png)
 
-<img src="https://user-images.githubusercontent.com/74476122/159846257-8db9edb7-400c-4992-906c-2eab1e8b766d.png" width="500" height="500">
 
 # Sequence diagram
 
-![image](https://user-images.githubusercontent.com/74476122/159846393-8795b7e2-c6ce-47a1-9887-4a3faef75893.png)
+![스크린샷 2022-03-24 오후 3 17 55](https://user-images.githubusercontent.com/74476122/159847358-7dacb703-a5fc-48a3-8352-2693363f0b0e.png)
 
 # Design principles
