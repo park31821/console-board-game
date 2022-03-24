@@ -1,6 +1,6 @@
 # Console Board Game
 
-A console board game (Connect Four) using C# was implemented to understand the concept of object-oriented programming and design principles.
+A console board game (Connect Four) using C# was implemented to applying the concept of object-oriented programming and design principles.
 
 # Implementation
 
