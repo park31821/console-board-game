@@ -34,9 +34,9 @@ These classes should inherit to concrete classes to be used
 
 ## Singleton pattern
 
-Singleton pattern enables a class to have only one instance withing the program
+Singleton pattern enables a class to have only one instance within the program
 
-Singleton pattern was applies to following classes:
+Singleton pattern was applied to following classes:
 
 * ___ConnectFourReq___, a concrete subclass of ___Requirements___ 
   * Instead of creating a new instance in class ___Computer___, it was more efficient to create only one instance and connecting it with the class ___Computer___ as its methods ___MakeMove()___ returns ___CalculateMoves()___ of ___Requirements___
